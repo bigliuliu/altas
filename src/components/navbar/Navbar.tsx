@@ -22,7 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const checkRoute = () => {
-      const routes = ["/about", "/blog", "/resources", "/contact"];
+      const routes = ["/about", "/blog", "/resources", "/contact","/services","/properties"];
       if (routes.includes(pathname)) {
         setGreenTheme(true);
       } else {
@@ -148,14 +148,14 @@ const Navbar = () => {
                 greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
               } hover:underline underline-offset-4`}
             >
-              Services
+             <Link href="/services"> Services</Link>
             </li>
             <li
               className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
                 greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
               } hover:underline underline-offset-4`}
             >
-              Properties
+              <Link href="/properties"> Properties</Link>
             </li>
             <li
               className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${

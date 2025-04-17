@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import KenyaMap from "./KenyaMap";
 const Resources = () => {
-  const [activeTab, setActiveTab] = useState(5);
+  const [activeTab, setActiveTab] = useState(6);
   return (
     <div className="flex w-full flex-col">
       <div className="bg-[#008D48] flex flex-col pt-24 pl-24  text-white w-full h-[340px]">
@@ -21,8 +21,8 @@ const Resources = () => {
         </p>
       </div>
       <div className="w-full p-24">
-        <div className="w-2/3 grid grid-cols-5 gap-3 font-jakarta font-semibold text-base">
-          <span
+        <div className="w-11/12 grid grid-cols-6 gap-3 font-jakarta font-semibold text-xl">
+        <span
             onClick={() => {
               setActiveTab(1);
             }}
@@ -30,7 +30,7 @@ const Resources = () => {
               activeTab === 1 ? "text-[#11171E]" : "text-[#5C5C5C]"
             } hover:cursor-pointer`}
           >
-            Land laws
+            Land forms
           </span>
           <span
             onClick={() => {
@@ -40,7 +40,7 @@ const Resources = () => {
               activeTab === 2 ? "text-[#11171E]" : "text-[#5C5C5C]"
             } hover:cursor-pointer`}
           >
-            Land Statistics
+            Land laws
           </span>
           <span
             onClick={() => {
@@ -50,7 +50,7 @@ const Resources = () => {
               activeTab === 3 ? "text-[#11171E]" : "text-[#5C5C5C]"
             } hover:cursor-pointer`}
           >
-            Court determinations
+            Land Statistics
           </span>
           <span
             onClick={() => {
@@ -60,7 +60,7 @@ const Resources = () => {
               activeTab === 4 ? "text-[#11171E]" : "text-[#5C5C5C]"
             } hover:cursor-pointer`}
           >
-            Land sector developments{" "}
+            Court determinations
           </span>
           <span
             onClick={() => {
@@ -70,10 +70,20 @@ const Resources = () => {
               activeTab === 5 ? "text-[#11171E]" : "text-[#5C5C5C]"
             } hover:cursor-pointer`}
           >
+            Land sector developments
+          </span>
+          <span
+            onClick={() => {
+              setActiveTab(6);
+            }}
+            className={`${
+              activeTab === 6 ? "text-[#11171E]" : "text-[#5C5C5C]"
+            } hover:cursor-pointer`}
+          >
             RIM repository
           </span>
         </div>
-        {activeTab === 5 ? (
+        {activeTab === 6 ? (
           <div className="pt-14">
             <p className="font-sans font-semibold text-5xl  text-[#11171E]">
               Interactive County Map
