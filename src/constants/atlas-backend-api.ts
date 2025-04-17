@@ -1,0 +1,1 @@
+export const AtlasBackendApi:String = process.env.NEXT_PUBLIC_BASE_URL || "https://atlas-backend-api.onrender.com/api"

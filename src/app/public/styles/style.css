@@ -1,0 +1,12 @@
+
+
+.button {
+  @apply px-4 py-2 text-gray-500 m-1 rounded-2xl focus:outline-none;
+
+  /* Additional styles for the default state */
+}
+
+/* Styles for the active state */
+.button.active {
+  @apply bg-white; /* Replace with your desired styles for the active state */
+}

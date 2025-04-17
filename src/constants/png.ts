@@ -1,0 +1,14 @@
+import Land from "../../public/img/land.png";
+import Man from "../../public/img/business-man.jpg";
+import Security from "../../public/img/security.jpg";
+import Trans from "../../public/img/transparency.jpg";
+import User1 from "../../public/img/user1.jpg";
+import User2 from "../../public/img/user2.jpg";
+import User3 from "../../public/img/user3.jpg";
+import Business from "../../public/img/About.jpg";
+import BusinessMan from "../../public/img/man.jpg";
+import MOI from "../../public/img/moi.jpg";
+import Bank from "../../public/img/equity-bank.jpg";
+import Uchpic from "../../public/img/uchpic.jpg";
+import Uhuru from "../../public/img/uhuru.jpg";
+export { Land, Man, Security, Trans, User1, User2, User3,Business,BusinessMan,MOI,Bank,Uchpic,Uhuru };
