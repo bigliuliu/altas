@@ -1,4 +1,4 @@
-import { article } from "@/helpers/articleSource";
+
 import React from "react";
 import Article from "./Article";
 
@@ -9,17 +9,6 @@ const Articles = () => {
         Articles
       </h1>
       <main className="p-4 flex overflow-x-scroll hide-scroll-bar">
-        {article.map((element, index) => {
-          return (
-            <Article
-              key={index}
-              image={element.image}
-              title={element.title}
-              date={element.date}
-              link={element.link}
-            />
-          );
-        })}
       </main>
     </section>
   );
