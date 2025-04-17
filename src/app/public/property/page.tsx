@@ -1,7 +1,8 @@
 "use client";
 
 import DashboardGeolocator from "@/components/dashboard/DashboardGeolocator";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
+// import { Player, Controls } from "@lottiefiles/react-lottie-player";
 // import SearchResult from "../../../../public/pdf/Atlas-Search-Result.xlsx";
 import lottie from "../../../../public/json/success.json";
 import {
@@ -73,6 +74,11 @@ interface SearchData {
 }
 
 const Property = () => {
+  
+  const Player = dynamic(
+    () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
+    { ssr: false }
+  );
   const searchParams = useSearchParams()
   const [inputText, setInputText] = useState("");
   console.log("Count is County", searchParams.get("title"))

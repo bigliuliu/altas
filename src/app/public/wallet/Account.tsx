@@ -6,7 +6,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { DebitCard } from "@/constants/svg";
-import { Player } from "@lottiefiles/react-lottie-player";
+// import { Player } from "@lottiefiles/react-lottie-player";
+
 import {
   CirclesThreePlus,
   PaperPlaneTilt,
@@ -27,8 +28,12 @@ import { Separator } from "@/components/ui/separator";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-
+import dynamic from "next/dynamic";
 const Account = () => {
+  const Player = dynamic(
+    () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
+    { ssr: false }
+  );
   const [transactionConfirm, setTransactionConfirm] = useState(false);
   const [confirmMpesaCode, setConfirmMpesaCode] = useState(false);
   const [openSuccess, setOpenSuccess] = useState(false);

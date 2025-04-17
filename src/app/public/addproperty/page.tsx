@@ -4,7 +4,8 @@ import React, { FormEvent, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useQuery } from "@tanstack/react-query";
 import { format, parse, isValid } from "date-fns";
-import { Player } from "@lottiefiles/react-lottie-player";
+// import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
 import { ArrowLeft, Check, ChevronsUpDown, LoaderIcon } from "lucide-react";
 import DashboardContainer from "@/container/DashboardContainer";
 import { Button } from "@/components/ui/button";
@@ -77,6 +78,10 @@ const dateFormats: string[] = [
 ];
 
 const AddProperty = () => {
+  const Player = dynamic(
+    () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
+    { ssr: false }
+  );
   const [open, setOpen] = React.useState(false)
   const [selectedMotherTitle, setMotherTitle] = React.useState("")
   const [notification, setNotification] = React.useState<string>();

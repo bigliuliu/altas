@@ -34,7 +34,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Player } from "@lottiefiles/react-lottie-player";
+// import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
 import success from "../../../../public/json/success.json";
 import errorJson from "../../../../public/json/error.json";
 import { countiesSource } from "@/helpers/countiesSource";
@@ -49,6 +50,10 @@ import { useToast } from "@/hooks/use-toast";
 import performBilling from "@/lib/billing";
 
 const UpdateProperty = () => {
+  const Player = dynamic(
+    () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
+    { ssr: false }
+  );
   const [ismotherTitleSizeValid, setIsMotherTitleSizeValid] = React.useState(true);
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);

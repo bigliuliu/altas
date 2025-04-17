@@ -8,7 +8,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import AuthContainer from "@/container/AuthContainer";
-import { Player } from "@lottiefiles/react-lottie-player";
+// import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
@@ -19,6 +20,11 @@ import {
 import lottieSuccess from "../../../public/json/success.json"
 
 const ForgotPassword = () => {
+  const Player = dynamic(
+    () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
+    { ssr: false }
+  );
+  
   const [openOTP, setOpenOTP] = useState(false);
   const [openResetPassword, setOpenResetPassword] = useState(false);
   const [openSuccess, setOpenSuccess] = useState(false);
@@ -109,7 +115,7 @@ const ForgotPassword = () => {
               {...registerPhoneNumber("phoneNumber", {
                 required: " This is required ",
               })}
-              type={"number" || "email"}
+              type="number"
               id=""
               className="flex justify-around border border-[#A5A5A533] bg-[#141A1980] rounded-md py-3 px-6 w-full focus:outline-none ring-offset-[#A5A5A533] focus-visible:bg-transparent"
             />
