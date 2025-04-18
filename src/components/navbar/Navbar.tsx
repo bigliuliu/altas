@@ -22,7 +22,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const checkRoute = () => {
-      const routes = ["/about", "/blog", "/resources", "/contact","/services","/properties"];
+      const routes = [
+        "/about",
+        "/blog",
+        "/resources",
+        "/contact",
+        "/services",
+        "/properties",
+      ];
       if (routes.includes(pathname)) {
         setGreenTheme(true);
       } else {
@@ -125,59 +132,28 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center">
           <ul
-            className={`flex flex-col sm:flex-row justify-around text-base font-jakarta font-semibold w-auto ${
+            className={`flex flex-col sm:flex-row justify-center items-center gap-x-8 text-xl font-jakarta font-extrabold w-auto ${
               greenTheme ? "text-white" : "text-[#414651]"
             }`}
           >
-            <li
-              className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
-                greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
-              } hover:underline underline-offset-4`}
-            >
-              <Link href="/home">Home</Link>
-            </li>
-            <li
-              className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
-                greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
-              } hover:underline underline-offset-4`}
-            >
-              <Link href="/about"> About</Link>
-            </li>
-            <li
-              className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
-                greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
-              } hover:underline underline-offset-4`}
-            >
-             <Link href="/services"> Services</Link>
-            </li>
-            <li
-              className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
-                greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
-              } hover:underline underline-offset-4`}
-            >
-              <Link href="/properties"> Properties</Link>
-            </li>
-            <li
-              className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
-                greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
-              } hover:underline underline-offset-4`}
-            >
-              <Link href="/blog"> Blog</Link>
-            </li>
-            <li
-              className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
-                greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
-              } hover:underline underline-offset-4`}
-            >
-              <Link href="/resources"> Resources</Link>
-            </li>
-            <li
-              className={`mx-2 w-[100%] min-w-[100px] hover:cursor-pointer ${
-                greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
-              } hover:underline underline-offset-4`}
-            >
-              <Link href="/contact"> Contact</Link>
-            </li>
+            {[
+              { label: "Home", href: "/home" },
+              { label: "About", href: "/about" },
+              { label: "Services", href: "/services" },
+              { label: "Properties", href: "/properties" },
+              { label: "Blog", href: "/blog" },
+              { label: "Resources", href: "/resources" },
+              { label: "Contact", href: "/contact" },
+            ].map(({ label, href }) => (
+              <li
+                key={label}
+                className={`text-center min-w-[100px] hover:cursor-pointer ${
+                  greenTheme ? "hover:text-white" : "hover:text-[#218B53]"
+                } hover:underline underline-offset-4`}
+              >
+                <Link href={href}>{label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="hidden lg:flex">
