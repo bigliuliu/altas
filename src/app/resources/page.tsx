@@ -21,14 +21,14 @@ const Resources = () => {
         </p>
       </div>
       <div className="w-full p-24">
-        <div className="w-11/12 grid grid-cols-6 gap-3 font-jakarta font-semibold text-xl">
+        <div className="w-11/12 flex flex-row font-jakarta font-semibold text-xl">
         <span
             onClick={() => {
               setActiveTab(1);
             }}
             className={`${
               activeTab === 1 ? "text-[#11171E]" : "text-[#5C5C5C]"
-            } hover:cursor-pointer`}
+            } hover:cursor-pointer mr-9`}
           >
             Land forms
           </span>
@@ -38,7 +38,7 @@ const Resources = () => {
             }}
             className={`${
               activeTab === 2 ? "text-[#11171E]" : "text-[#5C5C5C]"
-            } hover:cursor-pointer`}
+            } hover:cursor-pointer mr-9`}
           >
             Land laws
           </span>
@@ -48,7 +48,7 @@ const Resources = () => {
             }}
             className={`${
               activeTab === 3 ? "text-[#11171E]" : "text-[#5C5C5C]"
-            } hover:cursor-pointer`}
+            } hover:cursor-pointer mr-9`}
           >
             Land Statistics
           </span>
@@ -58,7 +58,7 @@ const Resources = () => {
             }}
             className={`${
               activeTab === 4 ? "text-[#11171E]" : "text-[#5C5C5C]"
-            } hover:cursor-pointer`}
+            } hover:cursor-pointer mr-9`}
           >
             Court determinations
           </span>
@@ -68,7 +68,7 @@ const Resources = () => {
             }}
             className={`${
               activeTab === 5 ? "text-[#11171E]" : "text-[#5C5C5C]"
-            } hover:cursor-pointer`}
+            } hover:cursor-pointer mr-9`}
           >
             Land sector developments
           </span>
@@ -90,7 +90,7 @@ const Resources = () => {
             </p>
             <p className="font-jakarta font-normal text-xl text-[#11171E] pt-3">
               Explore land registration sections across Kenya&#39;s counties.
-              Select a county to <br /> view its registration sections, blocks,
+              Select a county to view its registration sections, blocks,
               and downloadable registry index maps.
             </p>
             <div className="w-2/3 px-8 py-16">
