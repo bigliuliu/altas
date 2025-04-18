@@ -161,7 +161,7 @@ const Navbar = () => {
             <div>
               <Link
                 href="/login"
-                className="font-j font-semibold text-base text-white mr-6"
+                className="font-j font-semibold text-lg text-white mr-6"
               >
                 Login
               </Link>
