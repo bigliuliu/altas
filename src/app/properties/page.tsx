@@ -96,10 +96,7 @@ const Properties = () => {
           Properties
         </p>
         <p className="mb-5 font-sans font-semibold text-5xl">
-          Atlas has carefully selected a suite of services
-        </p>
-        <p className="font-jakarta text-xl font-normal">
-          In tandem with the most critical land administration functions.
+        A database of properties secured on the blockchain powered by Atlas
         </p>
       </div>
       <div className="px-24  py-12 grid grid-cols-4 gap-4">

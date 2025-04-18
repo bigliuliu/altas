@@ -2,7 +2,7 @@ import { serviceSource } from "@/helpers/serviceSource";
 import React from "react";
 import ServiceCard from "./ServiceCard";
 interface ServiceProps {
-  isShowTitle ?: boolean;
+  isShowTitle?: boolean;
 }
 
 const Services = ({ isShowTitle = true }: ServiceProps) => {
@@ -20,13 +20,15 @@ const Services = ({ isShowTitle = true }: ServiceProps) => {
       <main className="grid grid-cols-3 gap-12">
         {serviceSource.map((element, index) => {
           const isLast = index === serviceSource.length - 1;
+          const shouldCenter = isLast && serviceSource.length % 3 === 1;
+
           return (
             <div
               key={index}
               className={
-                isLast && serviceSource.length % 3 === 1
+                shouldCenter
                   ? "col-span-3 flex justify-center"
-                  : ""
+                  : "flex justify-center"
               }
             >
               <ServiceCard

@@ -7,11 +7,7 @@ const About = () => {
   return (
     <div className="flex w-full flex-col">
       <div className="bg-[#008D48] flex flex-col items-center pt-24  text-white w-full h-[480px] text-center">
-        <p className="mb-5 font-sans font-semibold text-4xl">Who We Are</p>
-        <p className="font-jakarta text-xl font-medium">
-          A Kenyan based digital land registry service provider leveraging on
-          blockchain <br /> technology
-        </p>
+        <p className="mb-5 font-sans font-semibold text-5xl">A digital land registry service provider leveraging on blockchain technology </p>
       </div>
       <div className="px-24">
         <div className="w-full aspect-[1248/655] relative z-10 -mt-32 rounded-2xl overflow-hidden">
